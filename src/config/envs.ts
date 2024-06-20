@@ -3,15 +3,17 @@ import { z } from 'zod';
 
 interface EnvVars {
   // PORT: number;
-  // DATABASE_URL: string;
+  DATABASE_URL: string;
   NATS_SERVERS: string[];
+  JWT_SECRET: string;
 }
 
 const envsSchema = z
   .object({
     // PORT: z.coerce.number(),
-    // DATABASE_URL: z.coerce.string(),
+    DATABASE_URL: z.coerce.string(),
     NATS_SERVERS: z.array(z.coerce.string()),
+    JWT_SECRET: z.coerce.string(),
   })
   .passthrough();
 
