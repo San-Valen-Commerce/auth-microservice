@@ -17,4 +17,4 @@ steps:
         "southamerica-east1-docker.pkg.dev/san-valen-commerce/san-valen-registry/auth-ms",
       ]
 options:
-logging: NONE
+  logging: NONE
